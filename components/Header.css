@@ -1,0 +1,12 @@
+.dh-header {
+  background-color: #103037;
+  margin: 0;
+  padding: 10px 2rem;
+  display: flex;
+}
+
+.dh-header .ant-menu {
+  margin-left: 16px;
+  width: 100%;
+  background-color: inherit;
+}
