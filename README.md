@@ -1,7 +1,7 @@
 # ssr-dagshub
 ```
 touch .env
-set PORT and HOST 
+set PORT and REPLACE to your site https://dagshub.com/ 
 yarn 
 yarn start
 ```
