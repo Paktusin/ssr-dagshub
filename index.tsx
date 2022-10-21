@@ -34,13 +34,20 @@ app.get("*", async (req, res, next) => {
       el.innerHTML = ReactDOMServer.renderToStaticMarkup(<Header />);
     }
   });
-  root
-    .querySelector("body")!
-    .appendChild(
-      parse('<link rel="stylesheet" type="text/css" href="/rcstatic/main.css"/>')
-    )
-    .appendChild(parse(`<script src="/rcstatic/main.js"></script>`));
-  return res.send(root.toString());
+  try {
+    root
+      .querySelector("body")!
+      .appendChild(
+        parse(
+          '<link rel="stylesheet" type="text/css" href="/rcstatic/main.css"/>'
+        )
+      )
+      .appendChild(parse(`<script src="/rcstatic/main.js"></script>`));
+    return res.send(root.toString());
+  } catch (err) {
+    console.error(err);
+    return html;
+  }
 });
 
 app.listen(config.PORT, () => {

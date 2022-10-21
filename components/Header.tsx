@@ -1,6 +1,5 @@
 import React, { useCallback, useMemo, useState } from "react";
 import { Menu, Layout } from "antd";
-import { ItemType } from "antd/lib/menu/hooks/useItems";
 
 export const Header: React.FC = () => {
   const onSelect = useCallback((selectInfo: any) => {
