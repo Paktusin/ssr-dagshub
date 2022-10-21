@@ -44,5 +44,5 @@ app.get("*", async (req, res, next) => {
 });
 
 app.listen(config.PORT, () => {
-  console.log(`server listen port ${config.PORT}`);
+  console.log(`go to http://localhost:${config.PORT}/`);
 });
